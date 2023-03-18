@@ -23,7 +23,8 @@ const port = process.env.PORT || 8000;
  *  cho phép trình duyệt gửi các thông tin xác thực (như cookie hoặc token) trong các yêu cầu CORS.
  */
 const corsOptions = {
-    origin: true,
+    // origin: true,
+    origin: ["http://localhost:3000", "https://tourfe.onrender.com"],
     credentials: true
 }
 
