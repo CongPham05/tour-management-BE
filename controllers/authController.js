@@ -67,7 +67,8 @@ export const login = async (req, res) => {
         res.cookie('accessToken', token,
             {
                 httpOnly: true, // bật bảo vệ cookie khỏi các cuộc tấn công Cross-Site
-                expires: token.expiresIn //thông báo đặt thời gian hết hạn của cookie
+                expires: token.expiresIn, //thông báo đặt thời gian hết hạn của cookie
+                domain: "onrender.com"
             }).status(200).json({
                 success: true,
                 message: 'Successfully login',
